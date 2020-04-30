@@ -1,6 +1,6 @@
 # ECS fargate stacks by CDK with fastAPI
 
-[![MIT License](https://badgen.now.sh/badge/License/MIT/blue)](https://github.com/sbstjn/cra-serverless/blob/master/LICENSE.md)
+[![MIT License](https://badgen.now.sh/badge/License/MIT/blue)](https://github.com/sintaro/CDK_ECSFargate_FastAPI/blob/master/LICENSE.md)
 [![sintaro](https://badgen.now.sh/badge/by/sintaro/purple)](https://github.com/sintaro)
 
 
