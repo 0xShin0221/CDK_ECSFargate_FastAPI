@@ -1,0 +1,16 @@
+version: "3.3"
+
+services:
+  api:
+    container_name: "api"
+    build: ./api
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./../backend:/usr/src/server
+    networks:
+      - local-net
+
+networks:
+  local-net:
+    driver: bridge
