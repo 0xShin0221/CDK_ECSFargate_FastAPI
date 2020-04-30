@@ -36,11 +36,11 @@ cdk_doctor
 ```
 
 ## Usage
+Specified these to environment like .env file
 
-
+`$ touch > .env`
 
 ``` 
-# Specified these to environment like .env file > $ touch > .env
 REPOSITORY_NAME=cdk-fargate-fastapi
 PORT=8080
 ACCOUNT=XXXXXX
