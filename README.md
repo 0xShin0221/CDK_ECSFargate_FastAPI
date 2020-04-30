@@ -36,3 +36,18 @@ cdk_doctor
 ```
 
 ## Usage
+
+
+
+``` 
+# Specified these to environment like .env file > $ touch > .env
+REPOSITORY_NAME=cdk-fargate-fastapi
+PORT=8080
+ACCOUNT=XXXXXX
+AWS_REGION=ap-northeast-1
+AWS_ACCESS_KEY_ID=XXXXXXXXXXXXXXXXXXXXX
+AWS_SECRET_ACCESS_KEY=XXXXXXXXXXXXXXXXXXXXXX
+ROLE_ARN=arn:aws:iam::XXXXXXXXXXXXXXXXXXX:role/ecsTaskExecutionRole
+ECR_REGISOTRY=XXXXXXXXXX.dkr.ecr.ap-northeast-1.amazonaws.com/XXXXXXXXXXXXXXXX:latest
+
+```
