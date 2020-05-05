@@ -2,10 +2,10 @@
 
 from aws_cdk import core
 
-from cdk.cdk_stack import CdkStack
-
+from cdk.ecr_stack import ECRStack
+from cdk.ecs_stack import ECSStack
 
 app = core.App()
-CdkStack(app, "cdk")
-
+ECRStack(app, "cdk-fargate-fast-api-ecr")
+ECSStack(app,"cdk-fargate-fast-api-ecs")
 app.synth()
