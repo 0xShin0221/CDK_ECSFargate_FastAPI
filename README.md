@@ -38,6 +38,19 @@ cdk_doctor
 
 ## Usage
 
-``` txt: .env
+Specified these to environment like .env file
 
+`$ touch > .env`
+
+```sh title=.envに記載
+REPOSITORY_IMAGE=XXXXX-ecr-image
+ECR_STACK_NAME=xxxxxxxxxxx
+ECS_STACK_NAME=xxxxxxxxxxx
+PORT=XXXX
+ACCOUNT=XXXXXX
+AWS_REGION=XXXXXX
+AWS_ACCESS_KEY_ID=XXXXXXXXXXXXXXXXXXXXX
+AWS_SECRET_ACCESS_KEY=XXXXXXXXXXXXXXXXXXXXXX
+ROLE_ARN=arn:aws:iam::XXXXXXXXXXXXXXXXXXX:role/ecsTaskExecutionRole
+ECR_REGISOTRY=XXXXXXXXXX.dkr.ecr.XXXXXXXXXXXXXXXX.amazonaws.com/XXXXXXXXXXXXXXXX:latest
 ```
