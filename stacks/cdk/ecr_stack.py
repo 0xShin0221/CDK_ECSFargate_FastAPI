@@ -1,3 +1,4 @@
+import os
 from aws_cdk import core, aws_ecr as ecr
 
 
@@ -6,5 +7,5 @@ class ECRStack(core.Stack):
         super().__init__(scope, id, **kwargs)
 
         ecr.Repository(
-            self, id="CDKFargateFastAPI", repository_name="cdk-fargate-fastapi"
+            self, id="CDKFargateFastAPI", repository_name=os.environ["REPOSITORY_NAME"]
         )
