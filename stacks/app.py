@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
+import os
 
 from aws_cdk import core
 
-from cdk.cdk_stack import CdkStack
-
+from cdk.ecs_stack import ECSStack
+from cdk.ecr_stack import ECRStack
 
 app = core.App()
-CdkStack(app, "cdk")
+ECRStack(app, os.environ["ECR_STACK_NAME"])
+ECSStack(app, os.environ["ECS_STACK_NAME"])
 
 app.synth()

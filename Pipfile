@@ -18,7 +18,7 @@ fastapi = "*"
 uvicorn = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "3.8"
 
 [scripts]
 start = "bash -c 'cd backend && uvicorn main:api --reload --host 0.0.0.0 --port ${PORT}'"
@@ -29,8 +29,9 @@ ecr_login = "bash -c 'aws ecr get-login-password --region ${AWS_REGION} | docker
 tagged_image="bash -c 'docker tag ${REPOSITORY_NAME} ${ACCOUNT}.dkr.ecr.${AWS_REGION}.amazonaws.com/${REPOSITORY_NAME}:latest'"
 push_to_ecr="bash -c 'docker push ${ACCOUNT}.dkr.ecr.${AWS_REGION}.amazonaws.com/${REPOSITORY_NAME}:latest'"
 deploy_image_ecr = "bash -c  'pipenv run tagged_image && pipenv run push_to_ecr'"
-deploy_ecr_stack = "bash -c 'cd stacks && cdk deploy cdk-fargate-fast-api-ecr'"
-deploy_ecs_stack = "bash -c 'cd stacks && cdk deploy cdk-fargate-fast-api-ecs'"
+deploy_ecr_stack = "bash -c 'cd stacks && cdk deploy ${ECR_STACK_NAME}'"
+deploy_ecs_stack = "bash -c 'cd stacks && cdk deploy ${ECS_STACK_NAME}'"
+cdk = "bash -c 'cd stacks'"
 cdk_ls = "bash -c 'cd stacks && cdk ls'"
 cdk_diff = "bash -c 'cd stacks && cdk diff'"
 cdk_doctor = "bash -c 'cd stacks && cdk doctor'"

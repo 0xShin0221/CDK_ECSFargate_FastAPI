@@ -30,9 +30,14 @@ deploy_ecr_stack
 deploy_ecs_stack
 
 # CDK scripts
+cdk
 cdk_ls
 cdk_diff
 cdk_doctor
 ```
 
 ## Usage
+
+``` txt: .env
+
+```
